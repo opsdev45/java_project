@@ -6,13 +6,14 @@ public class Person {
     private Date _dateOfBirth;
     private final String DEFULTNAME="someone";
     private final String DEFULTID="000000000";
+    private final int LENGTH_ID=9;
 
     public Person(String name,String id,Date dateOfBirth){
         if (name.isEmpty())
             _name=DEFULTNAME;
         else
             _name=name;
-        if (id.length() != 9)
+        if (id.length() != LENGTH_ID)
             _id=DEFULTID;
         else
             _id=id;
@@ -34,7 +35,7 @@ public class Person {
 
     }
     public void setId (String id){
-        if (id.length() !=9 )
+        if (id.length() !=LENGTH_ID )
             _id=DEFULTID;
         else
             _id=id;
@@ -63,6 +64,7 @@ class PersonTest {
         Date birthDate = new Date(30, 2, 1990);
         Date birthDate1 = new Date(21, 2, 1990);
         Person person1 = new Person("John Doe", "123456789", birthDate);
+        Person person3 = new Person("", "12345678912", birthDate);
         Person person2 = new Person(person1);
         person2.setName("ofir");
         person2.setId("123456789");
@@ -73,6 +75,7 @@ class PersonTest {
         System.out.println(person2.compareTo(person1));
         System.out.println(person2.compareTo(person2));
         System.out.println("Person 1: \n" + person1.toString());
+        System.out.println("invalid Person : \n" + person3.toString());
         System.out.println("\nPerson 2 (copy of Person 1): \n" + person2.toString());
     }
 }
