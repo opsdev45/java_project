@@ -1,7 +1,11 @@
 package org.example;
-
 import java.util.Scanner;
-
+/**
+ * Matala 11 - Calculate 𝑎𝑥^2 + bx + 𝑐 = 0 equation
+ * 
+ * @author Ofir Izchakov
+ * @version 13/12/2023
+ */
 public class Equation {
     public static void main(String[] args) {
         //Take three number a,b,c from the user for 𝑎𝑥^2 + bx + 𝑐 = 0
@@ -14,7 +18,7 @@ public class Equation {
         // Calculate the discriminant (the value inside the square root)
         double rootValue = Math.pow(b, 2) - (4 * a * c);
         System.out.println(rootValue);
-        // Check if 'a' not zero
+        // Check if 'a' not zero 
         if (a != 0) {
             if (rootValue == 0) {
                 // Calculate and print the solution when the discriminant is zero
