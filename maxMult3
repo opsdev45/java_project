@@ -77,6 +77,6 @@ class Ex13StudentTester20441
         if (result5==-40)
             System.out.println("Passed, result is -40" );
         else
-            System.out.println("Failed,  expected: 2100   student's result: "+result5);
+            System.out.println("Failed,  expected: -40   student's result: "+result5);
     }
 }
